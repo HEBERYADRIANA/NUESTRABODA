@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Invitación de boda de Heber y Adriana">
+    <title>Heber y Adriana | Nuestra Boda</title>
+
+    <!-- Tipografía detectada en la invitación original -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+   <!-- ================================
+     SOBRE DE APERTURA
+================================ -->
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const audio = document.getElementById('backgroundMusic');
+        const button = document.getElementById('musicButton');
+
+        // Intenta reproducir al cargar la página (funcionará en PC)
+        audio.play().catch(() => {
+            // Si el navegador lo bloquea (común en celulares), 
+            // habilitamos un detector para el primer toque en cualquier parte de la pantalla
+            const unlockAudio = () => {
+                audio.play();
+                // Eliminamos los eventos para que solo ocurra una vez
+                document.removeEventListener('click', unlockAudio);
+                document.removeEventListener('touchstart', unlockAudio);
+            };
+
+            document.addEventListener('click', unlockAudio);
+            document.addEventListener('touchstart', unlockAudio);
+        });
+
+        // Opcional: mantén la funcionalidad de tu botón para pausar/reproducir manualmente
+        button.addEventListener('click', function() {
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.pause();
+            }
+        });
+    });
+</script>
+
+<section class="envelope-screen" id="envelopeScreen">
+
+    <div class="envelope-wrapper">
+
+        <!-- Parte trasera del sobre -->
+        <div class="envelope">
+
+            <!-- Papel interior -->
+            <div class="envelope-paper">
+                <blockquote>Heber & Adriana</blockquote>
+            </div>
+
+            <!-- Solapa superior -->
+            <div class="envelope-flap"></div>
+
+            <!-- Parte frontal -->
+            <div class="envelope-front">
+
+                <div class="envelope-heart">
+                    ♥
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="swipe-message">
+        <span>Desliza hacia abajo</span>
+        <span class="swipe-arrow">↓</span>
+    </div>
+
+</section>
+
+
+<!-- ================================
+     PORTADA DE LA INVITACIÓN
+================================ -->
+
+
+    <!-- Música: coloca tu archivo como audio/musica.mp3 -->
+    <audio id="backgroundMusic" loop preload="auto">
+        <source src="audio/musica.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- <button id="musicButton" class="music-button" aria-label="Activar o pausar música">♫</button> -->
+
+    <main>
+        <!-- PORTADA -->
+        <section class="hero">
+            <div class="hero-overlay">
+                <p class="event-type">Boda</p>
+                <h1>Heber y Adriana</h1>
+                <p class="hero-date">14/11/2026</p>
+
+
+                <!-- 
+                ESTO ES PARA PODER DESLIZAR LAS IMAGENES SI SE DESEA VER MAS
+                SOLO ES EL LOGOTIPO O DIBUJO QUE APARECE
+                <div class="scroll-hint">
+                    <span>↻</span>
+                    <small>Desliza para ver más fotos</small>
+                </div> -->
+            </div>
+        </section>
+<!-- GALERÍA -->
+<section class="gallery section">
+
+    <div class="gallery-slider">
+
+        <div class="gallery-slide active">
+            <img src="images/foto3.jpg" alt="Heber y Adriana">
+        </div> 
+
+        <div class="gallery-slide">
+            <img src="images/foto2.jpg" alt="Fotografía de la pareja">
+        </div>
+
+        <div class="gallery-slide">
+            <img src="images/foto3.jpg" alt="Fotografía de la pareja">
+        </div>
+
+    </div>
+
+    <div class="gallery-dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+
+</section>
+
+        <!-- PADRES -->
+        <section class="parents section beige">
+            <div class="content narrow">
+                <h2>Con la bendición de Dios y nuestros padres</h2>
+                <div class="ornament">✦</div>
+
+              <blockquote>
+                    Con el amor de Dios como guía y con la bendición de quienes nos dieron la vida,
+                    hoy damos un paso lleno de amor, fe y esperanza. Nuestros padres han sido parte
+                    esencial de nuestra historia, acompañándonos con sus consejos, enseñanzas,
+                    oraciones y amor incondicional.
+               
+                    <br><br>
+            
+                    Por eso, en este día tan especial, queremos reconocer y agradecer su presencia
+                    en nuestras vidas, pues con su amor nos han enseñado el verdadero significado
+                    de una familia y nos han acompañado hasta este hermoso momento en el que
+                    decidimos unir nuestras vidas para siempre.
+              
+
+                <div class="parent-list">
+                    <div class="parent">
+                        <span>Padres del Novio</span>
+                        <strong>Heber Cabrera &amp; Jocabeth Ruano</strong>
+                        <i>○</i>
+                    </div>
+
+                    <div class="parent">
+                        <span>Madre de la Novia</span>
+                        <strong>Aura Juarez</strong>
+                        <i>○</i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TEXTO -->
+        <section class="message section beige">
+            <div class="content narrow">
+              <blockquote>
+                    Con el corazón lleno de amor y gratitud, elevamos nuestras oraciones a Dios
+                    por permitirnos llegar a este momento tan especial de nuestras vidas.
+                
+               
+                    Confiamos en que cada encuentro tiene un propósito y que todo sucede en el
+                    tiempo perfecto de Dios. Hoy, con profunda alegría y llenos de ilusión,
+                    celebramos el amor que nos une y la decisión de caminar juntos por el sendero
+                    de la vida, tomados de Su mano.
+            
+                <p class="highlight">
+                    Porque has sido parte de nuestro camino, queremos que también seas parte de nuestro destino.
+                </p>
+              
+                    Será un honor y una gran alegría contar con tu presencia para celebrar junto a
+                    nosotros el inicio de esta nueva etapa, llena de amor, fe, esperanza y sueños compartidos.
+               <br><br>
+                <br><br>
+                    “Todo tiene su tiempo, y todo lo que se quiere debajo del cielo tiene su hora.”
+                    <cite>Eclesiastés 3:1</cite>
+                     <br><br>
+                    
+                
+                
+                    Hoy, en el tiempo perfecto de Dios, nuestros caminos se unen para formar un solo
+                    destino, confiando en que Su amor será siempre nuestra guía.
+                </blockquote>
+            </div>
+        </section>
+
+        <!-- CUENTA REGRESIVA -->
+        <section class="countdown section">
+            <div class="content">
+                <p class="eyebrow">Falta muy poco</p>
+                <h2>La cuenta regresiva</h2>
+                <div id="countdown" class="countdown-grid">
+                    <div><strong id="days">00</strong><span>Días</span></div>
+                    <div><strong id="hours">00</strong><span>Horas</span></div>
+                    <div><strong id="minutes">00</strong><span>Minutos</span></div>
+                    <div><strong id="seconds">00</strong><span>Segundos</span></div>
+                </div>
+            </div>
+        </section>
+
+       <!-- UBICACIÓN -->
+<section class="location section">
+    <div class="content">
+
+        <p class="eyebrow">Ceremonia religiosa:</p>
+
+        <h2>Salon de Eventos La Calera</h2>
+
+        <p>Poptún, Guatemala</p>
+
+        <!-- GOOGLE MAPS -->
+        <div class="map-container">
+            <iframe
+                src="https://www.google.com/maps?q=16.3365111,-89.4369538&z=17&output=embed"
+                width="100%"
+                height="400"
+                style="border:0;"
+                allowfullscreen
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+
+        <a
+            class="gold-button"
+            href="https://www.google.com/maps/place/16%C2%B020'11.4%22N+89%C2%B026'13.0%22W/@16.3365111,-89.4369538,1073m"
+            target="_blank"
+            rel="noopener noreferrer">
+            Abrir en Google Maps
+        </a>
+
+    </div>
+</section>
+
+        <!-- HORARIO -->
+        <section class="schedule section beige">
+            <div class="content">
+                <h2>Horario del Evento</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <span class="timeline-icon">♡</span>
+                        <div>
+                            <p class="activity">Ceremonia</p>
+                            <strong>04:30 pm .</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONFIRMACIÓN -->
+    
+<section class="rsvp section">
+    <div class="content narrow">
+        <p class="eyebrow">Tu presencia será nuestro mejor regalo</p>
+        <h2>Te esperamos</h2>
+        <p>Acompáñanos a celebrar este día tan especial.</p>
+
+        <!-- <a
+            href="https://wa.me/50236355774?text=Hola%2C%20quiero%20confirmar%20mi%20asistencia%20a%20la%20boda%20de%20Heber%20y%20Adriana."
+            class="gold-button"
+            target="_blank"
+            rel="noopener noreferrer">
+            Confirmar asistencia
+        </a> -->
+
+    </div>
+</section>
+</blockquote>
+        <footer>
+            <p>Con amor</p>
+            <div class="footer-names">Heber &amp; Adriana</div>
+            <small>2026</small>
+        </footer>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
