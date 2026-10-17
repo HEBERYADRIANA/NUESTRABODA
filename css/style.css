@@ -1198,8 +1198,9 @@ body {
 ========================================================= */
 
 .creador {
-  font-size: 0.3rem;
+  font-size: 0.65rem;
   color: #cecece;
   text-align: right;
-  margin-top: 5px;
+  margin: 0;
+  line-height: 1.2;
 }
