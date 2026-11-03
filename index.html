@@ -310,7 +310,7 @@
         </section>
 
         <!-- CONFIRMACIÓN -->
-    
+<!--     
 <section class="rsvp section">
     <div class="content narrow">
         <p class="eyebrow">Tu presencia será nuestro mejor regalo</p>
@@ -336,7 +336,46 @@
         </a>
 
     </div>
+</section> -->
+
+<!-- CONFIRMACIÓN -->
+
+<section class="rsvp section">
+    <div class="content narrow">
+        <p class="eyebrow">Tu presencia será nuestro mejor regalo</p>
+        <h2>Te esperamos</h2>
+        <p>Acompáñanos a celebrar este día tan especial.</p>
+        <p>CONFIRMA TU ASISTENCIA</p>
+
+        <button type="button" class="gold-button" onclick="mostrarAviso()">
+            INVITADOS DEL NOVIO
+        </button>
+
+        <button type="button" class="gold-button" onclick="mostrarAviso()">
+            INVITADOS DE LA NOVIA
+        </button>
+    </div>
 </section>
+
+<!-- VENTANA EMERGENTE -->
+<div id="avisoModal" class="modal-aviso">
+    <div class="modal-contenido">
+
+        <div class="icono-error">×</div>
+
+        <h2>¡Lo sentimos!</h2>
+
+        <p>
+            Para nosotros eres un invitado especial, pero el tiempo de
+            confirmación de asistencia ha llegado a su límite.
+        </p>
+
+        <button onclick="cerrarAviso()" class="boton-cerrar">
+            ENTENDIDO
+        </button>
+
+    </div>
+</div>
 
         <footer>
             <p>Con amor</p>
@@ -348,6 +387,17 @@
     <script src="js/script.js"></script>
 
     <p class="creador">Ing. Estuardo Cabrera</p>
+
+
+    <script>
+function mostrarAviso() {
+    document.getElementById("avisoModal").style.display = "flex";
+}
+
+function cerrarAviso() {
+    document.getElementById("avisoModal").style.display = "none";
+}
+</script>
 
 
 </body>
